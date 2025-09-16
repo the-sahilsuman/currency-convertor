@@ -1,7 +1,7 @@
-FROM nginx-1.29.0
+FROM nginx:1.29.0
 
-COPY . /usr/share/ngnix/html
+RUN apt-get update && apt-get install -y git
+
+RUN git clone https://github.com/the-sahilsuman/currency-convertor.git /usr/share/ngnix/html
 
 EXPOSE 80
-
-CMD ["echo","image crate suceefully"]
