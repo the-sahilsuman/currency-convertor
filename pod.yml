@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx-pod
+  namespace: nginx-namespace
+  labels:
+    app: nginx
+spec:
+  containers:
+    - name: currency-c
+      image: thesahilsuman/currency-c:latest
+      ports:
+        - containerPort: 80
